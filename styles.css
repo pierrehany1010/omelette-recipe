@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "YoungSerif-Regular";
+    src: url(assets/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family: "VariableFont";
+    src: url(assets/Outfit-VariableFont_wght.ttf);
+}
+body {
+    background-color: #f2e5d8;
+}
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    width:  50%;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 20px;
+}  
+.container-text{
+    color:   hsl(24, 5%, 18%);
+    font-size: 22px;
+    font-family: "YoungSerif-Regular";
+    cursor: context-menu;
+}
+.first-par{
+    font-size: 10px;
+    font-family: "VariableFont";
+    cursor: context-menu;
+}
+.first-list{
+    list-style-position: inside;
+    border-radius: 10px;
+    background-color: hsl(330, 100%, 98%);
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    cursor: context-menu;
+    ul li {
+        padding: 4px 0px;
+    }
+}
+.first-head-list{
+    text-indent: 5px; 
+    color:  hsl(332, 51%, 32%); 
+    font-size: 15px;
+    font-family: "VariableFont";
+
+}
+.first-bullets{
+    position: relative;
+    left: -30px;
+    font-family: "VariableFont";
+    font-size: 10px;
+}
+.first-bullets > li::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: hsl(332, 51%, 32%);
+    margin-right: 6px;
+    border-radius: 50%;
+}
+.second-list{
+    list-style-position: inside;
+    margin-bottom: 25px;
+    position: relative;
+    left: -30px;
+    cursor: context-menu;
+    ul li {
+    margin-bottom: 10px;
+    }
+}
+.second-head-list{
+    text-indent: 32px; 
+    color: hsl(14, 45%, 36%); 
+    font-family: "YoungSerif-Regular";
+    font-size: 20px;
+    font-weight: 400;
+}
+.second-bullets{
+    font-family: "VariableFont";
+    font-size: 10px;
+}
+.second-bullets > li::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: hsl(14, 45%, 36%);
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.first-line{
+    border: 1px solid #d7d7d7;
+    width: 48vw;
+}
+.third-list{
+    list-style-position: inside;  
+    margin-bottom: 25px;
+    margin-top: 20px;
+    position: relative;
+    left: -30px;
+    cursor: context-menu;
+    line-height:15px;
+    ul li {
+    margin-bottom: 15px;
+    } 
+}
+.third-head-list{
+    text-indent: 32px; 
+    color: hsl(14, 45%, 36%); 
+    font-size: 20px;
+    font-family: "YoungSerif-Regular";
+    font-size: 20px;
+    font-weight: 400;
+}
+.third-bullets{
+    font-family: "VariableFont";
+    font-size: 10px;
+    ol {list-style: none; counter-reset: li}
+    li::before {content: counter(li); color: hsl(14, 45%, 36%);
+        display: inline-block; width: 1em;
+        margin-left: -1em}
+        li {counter-increment: li}
+}
+ol > li::marker {
+    font-weight: bold;
+}
+  ol > li {
+    margin-bottom: 10px;
+}
+.second-line{
+    border: 1px solid #d7d7d7;
+    width: 48vw;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    cursor: context-menu;
+}
+  .first-head-table{
+    text-indent: 2px; 
+    color: hsl(14, 45%, 36%); 
+    font-family: "YoungSerif-Regular";
+    font-size: 20px;
+    font-weight: 400;
+    cursor: context-menu;
+}
+.para-table{
+    font-size: 10px;
+    margin-left: 3px;
+    cursor: context-menu;
+}
+  .first-table{
+    font-family: "VariableFont";
+    font-size: 10px;
+}
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+  th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: hsl(14, 45%, 36%);
+}
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0;
+    }
+    .rectangle {
+        width: 50%;
+        max-width: none;
+        padding: 15px;
+        margin: 0;
+        box-shadow: none;
+    }
+    .container-text, .first-par, .para-table, .first-head-list, .second-head-list, .third-head-list {
+        font-size: 16px;
+    }
+    .first-bullets, .second-bullets, .third-bullets {
+        font-size: 12px;
+    }
+    .first-table, td, th {
+        font-size: 12px;
+    }
+}
